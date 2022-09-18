@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <Prose>
           <h1 className="text-5xl font-bold mb-2"></h1>
           <p className="text-xl">
-          Souls is 4,444 hand drawing collection with unique traits and details, Doxxed founder, Unique utilities including Other deeds lands giveaway and travel ticket to North Finlånd to witness the northern lights views.
+          Souls is 4,444 hand drawing collection with unique traits and details, Doxxed founder, Unique utilities including Other deeds, lands giveaway and to witness the northern lights views. The 2 other deeds lands raffle giveaway chance are for the holders of 2 or more souls nfts. 0.2 Eth giveaway to the holder of 1 of the 4 .1:1 nfts
           </p>
         </Prose>
       </div>

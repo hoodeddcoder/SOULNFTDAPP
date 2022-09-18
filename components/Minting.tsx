@@ -109,7 +109,14 @@ export default function Minting() {
 
       <div className="bg-black border border-white rounded p-8 space-y-4">
         <div className="text-3xl font-bold text-center">
-        
+
+        <p className="text-4xl">
+          WL MINT
+
+          </p>
+          
+          <div></div>
+       
           <span className="text-red-700">{totalSupply}</span> /{' '}
           {projectConfig.maxSupply}
         </div>
