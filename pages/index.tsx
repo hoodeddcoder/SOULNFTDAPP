@@ -23,8 +23,28 @@ const Home: NextPage = () => {
       <div className="bg-black py-8">
         <Prose>
           <h1 className="text-5xl font-bold mb-2"></h1>
-          <p className="text-xl">
-          Souls is 4,444 hand drawing collection with unique traits and details, Doxxed founder, Unique utilities including Other deeds, lands giveaway and to witness the northern lights views. The 2 other deeds lands raffle giveaway chance are for the holders of 2 or more souls nfts. 0.2 Eth giveaway to the holder of 1 of the 4 .1:1 nfts
+          <p className="text-center text-xl">
+          Souls is 4,444 hand drawing collection with unique traits and details, Doxxed founder, Unique utilities including:
+          </p>
+          <br></br>
+          <p className="text-center text-xl">
+          1- ⛩ 2 other deeds lands raffle giveaway to the holders who mints or secondary buy 2 or more souls nfts
+          </p>
+          <p className="text-center text-xl">
+          2- ⛩ 0.2 Eth giveaway to the holders who mints the 4 1:1 souls nfts
+          </p>
+          <p className="text-center text-xl">
+          3- ⛩ LFGGG
+          </p>
+          <br></br>
+          <p className="text-center text-xl">
+          WL mint: 15.10 - 0.006Eth
+          </p>
+          <p className="text-center text-xl">
+          OG mint: 16.10 - FREE MINT
+          </p>
+          <p className="text-center text-xl">
+          Public mint: 17.10 - 0.009eth
           </p>
         </Prose>
       </div>

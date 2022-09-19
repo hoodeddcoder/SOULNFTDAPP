@@ -1,7 +1,7 @@
 const projectConfig = {
-  nftName: 'SoulNfts',
+  nftName: 'SoulsNfts',
 
-  nftSymbol: 'SoulNfts',
+  nftSymbol: 'Souls',
 
   maxSupply: 4444,
 
