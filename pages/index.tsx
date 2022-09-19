@@ -38,7 +38,7 @@ const Home: NextPage = () => {
           </p>
           <br></br>
           <p className="text-center text-xl">
-          WL mint: 15.10 - 0.006Eth
+          WL Mint: 15.10 - 0.006Eth
           </p>
           <p className="text-center text-xl">
           OG mint: 16.10 - FREE MINT

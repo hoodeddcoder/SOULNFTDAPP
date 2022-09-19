@@ -111,7 +111,7 @@ export default function Minting() {
         <div className="text-3xl font-bold text-center">
 
         <p className="text-4xl">
-          WL MINT
+          OG MINT
 
           </p>
           
