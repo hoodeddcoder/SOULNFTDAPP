@@ -20,11 +20,12 @@ export default function Minting() {
   const [isPending, setIsPending] = useState(false);
   const [isMinting, setIsMinting] = useState(false);
   const [mintAmount, setMintAmount] = useState(1);
+  const [mintStatus, setMintStatus] = useState(0);
+  const [mintTitle, setMintTitle] = useState('');
+  const [mintCost, setMintCost] = useState(0);
 
   async function mintNFTs() {
     if (account && ethereumProvider) {
-      const totalMintCost = (projectConfig.mintCost * mintAmount).toString();
-      const totalWei = ethers.utils.parseEther(totalMintCost).toBigInt();
       setMessage('');
       setIsPending(true);
       try {
@@ -37,9 +38,35 @@ export default function Minting() {
           ABI,
           signer
         );
-        const transaction = await contract.mint(mintAmount, {
-          value: totalWei,
-        });
+        console.log("onlyOG", await contract.onlyOG());
+        const onlyOG = await contract.onlyOG();
+        const onlyWhitelisted = await contract.onlyWhitelisted();
+        if (onlyOG == true) {
+          setMintStatus(0);
+        } else if (onlyWhitelisted == true) {
+          setMintStatus(1);
+        } else {
+          setMintStatus(2);
+        }
+        console.log("mintstatus", mintStatus)
+        const totalMintCost = (mintCost * mintAmount).toString();
+        const totalWei = ethers.utils.parseEther(totalMintCost).toBigInt();
+        let transaction;
+        if (mintStatus == 0) {
+          console.log("here");
+          transaction = await contract.ogmint(mintAmount, {
+            value: totalWei,
+          });
+        } else if (mintStatus == 1) {
+          transaction = await contract.whitelistmint(mintAmount, {
+            value: totalWei,
+          });
+        } else {
+          transaction = await contract.mint(mintAmount, {
+            value: totalWei,
+          });
+        }
+        
         setIsPending(false);
         setIsMinting(true);
         await transaction.wait();
@@ -93,6 +120,18 @@ export default function Minting() {
         web3Provider
       );
       setTotalSupply((await contract.totalSupply()).toString());
+      const onlyOG = await contract.onlyOG();
+      const onlyWhitelisted = await contract.onlyWhitelisted();
+      if (onlyOG == true) {
+        setMintTitle('OG MINT');
+        setMintCost(0);
+      } else if (onlyWhitelisted == true) {
+        setMintTitle('WHITELIST MINT');
+        setMintCost(0.006);
+      } else {
+        setMintTitle('PUBLIC MINT');
+        setMintCost(0.009);
+      }
     }
 
     fetchTotalSupply();
@@ -111,7 +150,7 @@ export default function Minting() {
         <div className="text-3xl font-bold text-center">
 
         <p className="text-4xl">
-          OG MINT
+          {mintTitle}
 
           </p>
           
@@ -123,7 +162,7 @@ export default function Minting() {
 
         <div className="text-center">
           <p className="text-xl">
-            Total price: {projectConfig.mintCost * mintAmount}{' '}
+            Total price: {mintCost * mintAmount}{' '}
             {projectConfig.chainName}
           </p>
          
