@@ -1,11 +1,11 @@
 const projectConfig = {
-  nftName: 'SoulsNfts',
+  nftName: 'SoulNfts',
 
-  nftSymbol: 'Souls',
+  nftSymbol: 'SOULD',
 
   maxSupply: 4444,
 
-  maxMintAmountPerTxn: 40,
+  maxMintAmountPerTxn: 4,
 
   mintCost: process.env.NODE_ENV === 'production' ? 0 : 0,
 
@@ -16,7 +16,7 @@ const projectConfig = {
 
   chainName: 'ETH', // 'ETH'
 
-  chainId: process.env.NODE_ENV === 'production' ? 4 : 4, // Ethereum (1), Rinkeby (4)
+  chainId: process.env.NODE_ENV === 'production' ? 1 : 1, // Ethereum (1), Rinkeby (4)
 
   siteDomain: 'www.yourdomain.com',
 
@@ -43,8 +43,8 @@ const projectConfig = {
 
   scanUrl:
     process.env.NODE_ENV === 'production'
-      ? 'https://rinkeby.etherscan.io/address/0x94333426aa71811730414759939a5c44580f4f99'
-      : 'https://rinkeby.etherscan.io/address/0x94333426aa71811730414759939a5c44580f4f99',
+      ? 'https://rinkeby.etherscan.io/address/0x94333426Aa71811730414759939A5c44580f4F99'
+      : 'https://rinkeby.etherscan.io/address/0x94333426Aa71811730414759939A5c44580f4F99',
   // 'https://polygonscan.com/address/0x37D23eABe6dB1d4152261f204A8A25d902cFd81d'
   // 'https://polygonscan.com/address/0x37D23eABe6dB1d4152261f204A8A25d902cFd81d'
 };
