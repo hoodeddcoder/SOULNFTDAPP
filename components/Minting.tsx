@@ -167,7 +167,7 @@ export default function Minting() {
           </p>
          
          
-          <p className="text-red-700">(excluding gas fees)</p>
+          <p className="text-red-700"></p>
         </div>
 
         <div className="flex justify-center items-center space-x-4">
