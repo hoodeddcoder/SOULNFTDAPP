@@ -11,12 +11,12 @@ const projectConfig = {
 
   networkName:
     process.env.NODE_ENV === 'production'
-      ? 'Rinkeby Testnet' // 'Ethereum Mainnet'
-      : 'Rinkeby Testnet', // 'Rinkeby Testnet'
+      ? 'Ethereum Mainnet' // 'Ethereum Mainnet'
+      : 'Ethereum Mainnet', // 'Rinkeby Testnet'
 
   chainName: 'ETH', // 'ETH'
 
-  chainId: process.env.NODE_ENV === 'production' ? 4 : 4, // Ethereum (1), Rinkeby (4)
+  chainId: process.env.NODE_ENV === 'production' ? 1 : 1, // Ethereum (1), Rinkeby (4)
 
   siteDomain: 'www.yourdomain.com',
 
