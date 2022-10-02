@@ -5,7 +5,7 @@ const projectConfig = {
 
   maxSupply: 4444,
 
-  maxMintAmountPerTxn: 400,
+  maxMintAmountPerTxn: 40,
 
   mintCost: process.env.NODE_ENV === 'production' ? 0.006 : 0.006,
 
@@ -38,13 +38,13 @@ const projectConfig = {
 
   contractAddress:
     process.env.NODE_ENV === 'production'
-      ? '0x94333426Aa71811730414759939A5c44580f4F99'
-      : '0x94333426Aa71811730414759939A5c44580f4F99',
+      ? '0x34275c6fcfb7a71da36c055d8ad474e8d5737290'
+      : '0x34275c6fcfb7a71da36c055d8ad474e8d5737290',
 
   scanUrl:
     process.env.NODE_ENV === 'production'
-      ? 'https://rinkeby.etherscan.io/address/0x94333426Aa71811730414759939A5c44580f4F99'
-      : 'https://rinkeby.etherscan.io/address/0x94333426Aa71811730414759939A5c44580f4F99',
+      ? 'https://etherscan.io/address/0x34275c6fcfb7a71da36c055d8ad474e8d5737290'
+      : 'https://etherscan.io/address/0x34275c6fcfb7a71da36c055d8ad474e8d5737290',
   // 'https://polygonscan.com/address/0x37D23eABe6dB1d4152261f204A8A25d902cFd81d'
   // 'https://polygonscan.com/address/0x37D23eABe6dB1d4152261f204A8A25d902cFd81d'
 };
