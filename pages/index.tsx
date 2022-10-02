@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           1- ⛩ 2 other deeds lands raffle giveaway to the holders who mints or secondary buy 2 or more souls nfts
           </p>
           <p className="text-center text-xl">
-          2- ⛩ 0.2 Eth giveaway to the holders who mints the 4 1:1 souls nfts
+          2- ⛩ 0.06 Eth giveaway to the holders who mints the 4 1:1 souls nfts
           </p>
           <p className="text-center text-xl">
           3- ⛩ LFGGG
