@@ -5,7 +5,7 @@ const projectConfig = {
 
   maxSupply: 4444,
 
-  maxMintAmountPerTxn: 40,
+  maxMintAmountPerTxn: 4,
 
   mintCost: process.env.NODE_ENV === 'production' ? 0.006 : 0.006,
 
@@ -33,8 +33,8 @@ const projectConfig = {
 
   openseaCollectionUrl:
     process.env.NODE_ENV === 'production'
-      ? 'https://opensea.io/collection/'
-      : 'https://opensea.io/collection/',
+      ? 'https://opensea.io/collection/-soulsnfts'
+      : 'https://opensea.io/collection/-soulsnfts',
 
   contractAddress:
     process.env.NODE_ENV === 'production'
